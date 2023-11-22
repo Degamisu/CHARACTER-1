@@ -64,8 +64,6 @@ int main()
     // Main loop
     while (1)
     {
-        // Clear the screen
-        VDP_clearPlan(APLAN);
 
         // Update and draw the player
         updatePlayer();
@@ -74,7 +72,6 @@ int main()
         // Wait for VBlank before flipping the screen
         VDP_waitVSync();
         VDP_showFPS(FALSE);
-        VDP_flip();
     }
 
     return 0;
