@@ -49,10 +49,8 @@ void updatePlayer()
 
 void drawPlayer()
 {
-    // Draw player character "@" with animation
-    VDP_drawText("   ", playerX - 8, playerY - 8);
-    VDP_drawText(" @ ", playerX - 8, playerY);
-    VDP_drawText("   ", playerX - 8, playerY + 8);
+    // Draw player character "@" without animation
+    VDP_drawText("@", playerX, playerY);
 }
 
 int main()
@@ -64,7 +62,8 @@ int main()
     // Main loop
     while (1)
     {
-
+        // player debugging for missing sprite
+        KDebug_Alert("Player X: %d, Y: %d", playerX, playerY);
         // Update and draw the player
         updatePlayer();
         drawPlayer();
